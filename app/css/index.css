@@ -1,0 +1,33 @@
+.top-fixed-top
+{
+    height:50px;
+}
+.content
+{
+    overflow: hidden;
+    position: absolute;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+    top: 50px;
+    bottom: 0px;
+    left: 180px;
+    right: 0px;
+    padding: 0px 10px;
+    overflow: auto;
+}
+.sideNav
+{
+    padding: 0px 20px;
+    position: fixed;
+    left: -20px;
+    top: 52px; /* same as .content top*/
+    bottom: 0px;
+    width: 180px;
+    background-color: #f1f1f1;
+    border-right: 1px solid #bbc0c4; /*z-index: 1020;  10 less than .navbar-fixed to prevent any overlap */
+    text-align:left;
+    font-size:11px;
+    font-weight:bold
+}

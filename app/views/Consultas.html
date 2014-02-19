@@ -1,0 +1,22 @@
+<form name="Consult">
+    <div style="width: 100%">
+        <table>
+            <tbody>
+            <tr>
+                <td>
+                    <a href="#/NewCotizacion">
+                        <input type="button" class="btn btn-primary" value="Nueva Solicitud">
+                    </a>
+                </td><td><a></a></td>
+                <td><a></a></td>
+                <td>
+                    <input type="button" class="btn btn-danger" ng-click="Delete()" value="eliminar">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <input type="checkbox"  ng-model="parent" /> Select/deselect all
+        <div class="gridStyle"  ng-grid="gridOptions" align="center" style="width: 100%"/>
+    </div>
+</form>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="css/ng-grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script type="text/javascript" src="JavaScript/jquery.js"></script>
+    <script type="text/javascript" src="JavaScript/angular.min.js"></script>
+    <script type="text/javascript" src="JavaScript/angular-route.min.js"></script>
+    <script type="text/javascript" src="JavaScript/ng-grid-2.0.7.min.js"></script>
+
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/navbarcolors.css">
+    <link href="css/style1.css" rel="stylesheet">
+
+    <link href="css/Popup.css"rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="views/ConsultasController.js"></script>
+    <script type="text/javascript" src="Home/HomeController.js"></script>
+    <script type="text/javascript" src="views/NewController.js"></script>
+    <script type="text/javascript" src="views/EditaCotizacionController.js"></script>
+    <script type="text/javascript" src="views/NewCotizacionController.js"></script>
+    <script type="text/javascript" src="views/ConsultasCotizacionesController.js"></script>
+    <script type="text/javascript" src="POM/POMController.js"></script>
+    <script type="text/javascript" src="views/CotizacionPendienteController.js"></script>
+
+
+</head>
+<body>
+<div class="top-fixed-top">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Compras</a>
+                <a class="navbar-brand"></a>
+                <a class="navbar-brand"></a>
+                <a class="navbar-brand"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/Consultas/'All'">Consulta Solicitudes</a></li>
+                    <li><a href="#/ConsultasCotizaciones/">Consulta de Cotizaciones</a></li>
+                    <li><a href="#/POM">POM</a></li>
+                    <li><a href="#/">Lotes</a></li>
+                    <li><a href="#/CotizacionPendiente">Cotizacion Pendiente</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">jcruiz@inmeta.com.mx <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="divider"></li>
+                            <li><a href="#">Option1</a></li>
+                            <li><a href="#">Option2</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Log Out</a></li>
+                        </ul>
+                    </li>
+                    <li><img src="img/favicon1.ico" alt="User" height="40" width="40"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="sideNav"  ng-controller="CntrlConsula">
+    <div style="clear: both; height: 50%;width: 114%;position: relative;overflow: scroll; background-color: #FD5200">
+        <a href="#/Consultas/Abierta" align="left" style="color: #ffffff">Abiertas <span class="badge">{{FiltroAbiertas()}}</span></a><br>
+        <a href="#/Consultas/Cotizada" align="left" style="color: #ffffff" >Cotizadas <span class="badge">{{FiltroCotizadas()}}</span></a><br>
+        <a href="#/Consultas/Rechazada" align="left" style="color: #ffffff">Rechazadas <span class="badge">{{FiltroRechazadas()}}</span></a><br>
+        <a href="#/Consultas/Caducada" align="left"style="color: #ffffff" >Caducadas <span class="badge">{{FiltroCaducadas()}}</span></a><br>
+    </div>
+
+    <div style="clear: both; height: 50%;width: 114%;position: relative;overflow: scroll; background-color: #29388f" >
+        <a href="#" style="color: #ffffff">Notificaciones</a><br>
+    </div>
+</div>
+
+<div class="content">
+    <div ng-app="app" ng-view align="center"></div>
+</div>
+</body>
+</html>

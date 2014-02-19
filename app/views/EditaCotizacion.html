@@ -1,0 +1,78 @@
+<form name="myForm">
+    <div align="center" style="width: 100%;">
+        <table colspan="2" style="text-align: center" style="width: 100%">
+            <thead>
+            <th colspan="2" style="text-align: center" class="lead">Editar Cotizacion</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <ul></ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="lead">Status:</td>
+                <td>
+                    <select ng-model="new_Stats" class="form-control">
+                        <option value="Abierta">Abierta</option>
+                        <option value="Rechazada">Rechazada</option>
+                        <option value="Caducada">Caducada</option>
+                        <option value="Confirmada">Confirmada</option>
+                        <option value="Procesada">Procesada</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="lead">Usuario:</td>
+                <td>
+                    <input type="text" ng-model="new_Usuario" id="example1" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td class="lead">Area:</td>
+                <td>
+                    <input type="text" ng-model="new_Areas" id="example2" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td class="lead">Proyecto:</td>
+                <td>
+                    <input type="text" ng-model="new_Proyecto" id="example3" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td class="lead">Fecha Solicitud:</td>
+                <td>
+                    <input type="date" ng-model="new_FechaSoli" id="example4" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td class="lead">Fecha Requerimiento:</td>
+                <td>
+                    <input type="date" ng-model="new_FechaReq" id="example5" class="form-control">
+                </td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>
+                    <ul></ul>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+
+        <table>
+            <tr>
+                <td>
+                    <input type="button" class="btn btn-primary"  value="Editar" ng-click="AddEdit()">
+                </td>
+                <td><a></a></td>
+                <td><a></a></td>
+                <td>
+                    <a href="#/Consultas/'All'"><input type="button" class="btn btn-danger"  value="Cancelar" ></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>

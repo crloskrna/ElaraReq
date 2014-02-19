@@ -1,0 +1,13 @@
+.gridStyle {
+    /*border: 1px solid rgb(212,212,212);*/
+    width: 1050px;
+    height: 300px;
+    left:90px;
+}
+.gridStyle1{
+   /* border: 1px solid rgb(212,212,212);*/
+    width: 1050px;
+    height: 500px;
+    position: relative;
+    left: -22px;
+}

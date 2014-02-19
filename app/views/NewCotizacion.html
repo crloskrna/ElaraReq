@@ -1,0 +1,199 @@
+<form name="NewCot">
+    <div align="center" style="width: 100%;">
+        <h2 class="lead">Solicitud de cotización</h2>
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <span class="lead">Empresa</span>
+                </td>
+                <td>
+                    <input ng-model="new_Empresa" type="text" class="form-control" placeholder="Empresa" disabled="true"/>
+                </td>
+                <td>
+                    &nbsp;<span class="lead">No. de solicitud de cotizacion</span>
+                </td>
+                <td>
+                    <input ng-model="new_noCotizacion" type="text" class="form-control"  placeholder="No.Cotizacion" disabled="true"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="lead">Nombre del Solicitante</span>
+                </td>
+                <td>
+                    <input ng-model="new_nombreSol" type="text" class="form-control" placeholder="Solicitante" disabled="true"/>
+                </td>
+                <td>
+                    &nbsp;<span class="lead">Fecha de solicitud</span>
+                </td>
+                <td>
+                    <input class="form-control" type="text" ng-model="new_fechasolicitudes" disabled="true"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="lead">Departamento</span>
+                </td>
+                <td>
+                    <input ng-model="new_Dpto" type="text" class="form-control" placeholder="Departamento" disabled="true"/>
+                </td>
+                <td>
+                    &nbsp;<span class="lead">Fecha de Requerimiento</span>
+                </td>
+                <td>
+                    <input ng-model="new_fechaReq" type="date" class="form-control"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="lead">Proyecto</span>
+                </td>
+                <td>
+                    <input ng-model="new_Proyecto" type="text" class="form-control" placeholder="Proyecto"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center">
+                </td>
+            </tr>
+        </table>
+        <div align="right" style=" height: 39px; width: 955px;">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="button" data-type="zoomin">
+                            <input type="button" value="+" class="btn btn-primary" ng-click="myStyle={opacity:'0.9'}" />
+                        </div>
+                    </td>
+                    <td><a></a></td>
+                    <td><a></a></td>
+                    <td>
+                        <input type="button"  class="btn btn-danger"  value="-" ng-click="DeleteItem()">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="gridStyle"  ng-grid="gridOptions" align="center" style="width: 100%" ng-style="myStyle"/>
+        <br>
+        <div align="left" style=" height: 39px; width: 955px;">
+            <table>
+                <tr>
+                    Observaciones
+                    <td>
+                        <textarea class="form-control" rows="4" style="width: 400px;" placeholder="Observaciones"></textarea>
+                    </td>
+                    <td><a></a></td>
+                    <td><a></a></td>
+                    <td><a></a></td>
+                    <td>
+                        <input type="button" class="btn btn-primary"  value="Guardar">
+                        <br>
+                        <input type="button" class="btn btn-primary"  value="Enviar" style=" width: 80px;">
+                        <br>
+                        <a href="#/Consultas/'All'"><input type="button" class="btn btn-danger"  value="Cancelar" ></a>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    Comentarios de rechazo
+                    <td>
+                        <textarea class="form-control" rows="4" style="width: 400px;"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <div class="overlay-container" name="DivItems">
+        <div class="window-container zoomin">
+            <div id="openModal" class="modalDialog">
+                <table>
+                    <tr>
+                        <td class="lead">Cantidad:</td>
+                        <td>
+                            <input type="number" ng-model="new_Cantidad" id="example6" class="form-control" placeholder="Cantidad" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lead">Categoria:</td>
+                        <td>
+                            <select ng-model="new_Categoria" class="form-control" required>
+                                <option value="Marca1">Electronicos</option>
+                                <option value="Marca2">Electrodomesticos</option>
+                                <option value="Marca3">Hogar</option>
+                                <option value="Marca4">Electronicos</option>
+                                <option value="Marca5">Electronicos</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lead">Descripcion:</td>
+                        <td>
+                            <input type="text" ng-model="new_Descripcion" id="example7" class="form-control" placeholder="Descripcion" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lead">Marca:</td>
+                        <td>
+                            <select ng-model="new_Marca" class="form-control" required>
+                                <option value="Marca1">Marca1</option>
+                                <option value="Marca2">Marca2</option>
+                                <option value="Marca3">Marca3</option>
+                                <option value="Marca4">Marca4</option>
+                                <option value="Marca5">Marca5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lead">Modelo:</td>
+                        <td>
+                            <select ng-model="new_Modelo" class="form-control" required>
+                                <option value="Modelo1">Modelo1</option>
+                                <option value="Modelo2">Modelo2</option>
+                                <option value="Modelo3">Modelo3</option>
+                                <option value="Modelo4">Modelo4</option>
+                                <option value="Modelo5">Modelo5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lead">Proveedor sug:</td>
+                        <td>
+                            <select ng-model="new_Proveedor" class="form-control" required>
+                                <option value="Proveedor1">Proveedor1</option>
+                                <option value="Proveedor2">Proveedor2</option>
+                                <option value="Proveedor3">Proveedor3</option>
+                                <option value="Proveedor4">Proveedor4</option>
+                                <option value="Proveedor5">Proveedor5</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" ng-disabled="NewCot.$invalid" ng-click="AgregaItem()">OK</button>
+                <a class="close"><button class="btn btn-danger" ng-click="cancel()">Cancelar</button></a>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.button').click(function() {
+                type = $(this).attr('data-type');
+                $('.overlay-container').fadeIn(function() {
+                    window.setTimeout(function(){
+                        $('.window-container.'+type).addClass('window-container-visible');
+                    }, 100);
+                });
+            });
+            $('.close').click(function() {
+                $('.overlay-container').fadeOut().end().find('.window-container').removeClass('window-container-visible');
+            });
+        });
+    </script>
+</form>

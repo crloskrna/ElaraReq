@@ -1,0 +1,95 @@
+<form name="New">
+    <div align="center" style="width: 819px;">
+        <table colspan="2" style="text-align: center" style="width: 100%">
+            <thead>
+            <th colspan="2" style="text-align: center" class="lead">Nueva Cotizacion</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <ul></ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="lead">Status:</td>
+                <td>
+                    <select ng-model="new_Status" class="form-control" required>
+                        <option value="Abierta">Abierta</option>
+                        <option value="Rechazada">Rechazada</option>
+                        <option value="Caducada">Caducada</option>
+                        <option value="Confirmada">Confirmada</option>
+                        <option value="Procesada">Procesada</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="lead">Usuario:</td>
+                <td>
+                    <div class="control-group" ng-class="{error: New.user.$invalid && !New.user.$pristine}">
+                        <input type="text" name="user" ng-model="new_Usuario" id="example1" class="form-control" placeholder="Usuario" required>
+                    </div>
+                </td>
+                <td>
+                <span ng-show="New.user.$error.required && !New.user.$pristine" class="help-inline" style="color:red;">
+                   *</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="lead">Area:</td>
+                <td>
+                    <div class="control-group" ng-class="{error: New.area.$invalid && !New.area.$pristine}">
+                        <input type="text" name="area" ng-model="new_Areas" id="example2" class="form-control" placeholder="Area" required>
+                    </div>
+                </td>
+                <td>
+                <span ng-show="New.area.$error.required && !New.area.$pristine" class="help-inline" style="color:red;">
+                   *</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="lead">Proyecto:</td>
+                <td>
+                    <div class="control-group" ng-class="{error: New.proyecto.$invalid && !New.proyecto.$pristine}">
+                        <input type="text" name="proyecto" ng-model="new_Proyecto" id="example3" class="form-control" placeholder="Proyecto" required>
+                    </div>
+                </td>
+                <td>
+                <span ng-show="New.proyecto.$error.required && !New.proyecto.$pristine" class="help-inline" style="color:red;">
+                   *</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="lead">Fecha Solicitud:</td>
+                <td>
+                    <input type="date" ng-model="new_FechaSoli" id="example4" class="form-control" required>
+                </td>
+            </tr>
+            <tr>
+                <td class="lead">Fecha Requerimiento:</td>
+                <td>
+                    <input type="date" ng-model="new_FechaReq" id="example5" class="form-control" required>
+                </td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>
+                    <ul></ul>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <input type="button" class="btn btn-primary" ng-disabled="New.$invalid"  value="Agregar" ng-click="Add()">
+                </td>
+                <td><a></a></td>
+                <td><a></a></td>
+                <td>
+                    <a href="#/Consultas/'All'"><input type="button" class="btn btn-danger"  value="Cancelar" ></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>

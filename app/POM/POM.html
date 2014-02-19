@@ -1,0 +1,153 @@
+<form name="NewCot">
+    <div align="center" style="width: 100%;">
+        <h2 class="lead">POM</h2>
+
+        <table style="height: 100%;width: 1000px;">
+            <tr>
+                <td>
+                    &nbsp;<span>No.de POM</span>
+                </td>
+                <td>
+                    <input ng-model="New_NoPOM" type="number" class="form-control" required/>
+                </td>
+                <td>
+                    &nbsp;<span>Estatus POM:</span>
+                </td>
+                <td>
+                    <input ng-model="New_Estatus" type="text" class="form-control" placeholder="Estatus POM" required/>
+                </td>
+                <td>
+                    &nbsp;<span>Terminos de Envio</span>
+                </td>
+                <td>
+                    <input ng-model="new_Terminos" type="text" class="form-control" placeholder="Terminos de envio" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Categoria:</span>
+                </td>
+                <td>
+                    <select ng-model="new_Categoria" class="form-control" required>
+                        <option value="Categoria1">Categoria</option>
+                        <option value="Categoria2">Categoria</option>
+                        <option value="Categoria3">Categoria</option>
+                        <option value="Categoria4">Categoria</option>
+                        <option value="Empresa5">Categoria</option>
+                        <option value="Empresa6">Categoria</option>
+                        <option value="Empresa7">Categoria</option>
+                    </select>
+                </td>
+                <td>
+                    &nbsp;<span>Fecha requerimiento:</span>
+                </td>
+                <td>
+                    <input ng-model="new_FechaReq" type="date" class="form-control" required/>
+                </td>
+                <td>
+                    &nbsp;<span>Medio de envio:</span>
+                </td>
+                <td>
+                    <input ng-model="new_MedioEvio" type="text" class="form-control" placeholder="Medio de envio" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;<span>Fecha de Elaboracion POM:</span>
+                </td>
+                <td>
+                    <input ng-model="new_FechaElabPOM" type="date" class="form-control" required/>
+                </td>
+                <td>
+                    &nbsp;<span>OLA dias:</span>
+                </td>
+                <td>
+                    <input ng-model="new_OlaDias" type="number" class="form-control" required/>
+                </td>
+                <td>
+                    &nbsp;<span>Terminos de pago:</span>
+                </td>
+                <td>
+                    <input ng-model="new_TerminoPago" type="text" class="form-control" placeholder="Terminos de Pago" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>TIPO DE POM (Servicio/ Artículos)</span>
+                </td>
+                <td>
+                    <input ng-model="new_TipoPOM" type="text" class="form-control" placeholder="Servicio/ Artículos" required/>
+                </td>
+                <td>
+                    &nbsp;<span>Fecha OLA:</span>
+                </td>
+                <td>
+                    <input ng-model="new_FechaOLA" type="date" class="form-control" required/>
+                </td>
+                <td>
+                    &nbsp;<span>Factura a:</span>
+                </td>
+                <td>
+                    <input ng-model="new_FacturaA" type="text" class="form-control" placeholder="Factura a:" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;<span>Proveedor:</span>
+                </td>
+                <td>
+                    <input ng-model="new_Proveedor" type="text" class="form-control" placeholder="Proveedor" required/>
+                </td>
+                <td>
+                    &nbsp;<span>Fecha compromiso:</span>
+                </td>
+                <td>
+                    <input ng-model="new_FechaCompromiso" type="date" class="form-control" required/>
+                </td>
+                <td>
+                    &nbsp;<span>Embarcar a:</span>
+                </td>
+                <td>
+                    <input ng-model="new_EmbarcarA" type="text" class="form-control" placeholder="Embarcar a:" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;<span>Contacto:</span>
+                </td>
+                <td>
+                    <input ng-model="new_Contacto" type="text" class="form-control" placeholder="Contacto" required/>
+                </td>
+                <td>
+                    <span><a></a></span>
+                </td>
+                <td>
+                    <span><a></a></span>
+                </td>
+                <td>
+                    &nbsp;<span>Presupuesto Preautorizado:</span>
+                </td>
+                <td>
+                    <input ng-model="new_PresupuestoAut" type="text" class="form-control" placeholder="Presupuesto Preautorizado" required/>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <div class="gridStyle"  ng-grid="gridOptions" align="center" style="width: 100%"/>
+        <br>
+        <div align="left" style=" height: 39px; width: 955px;">
+            <table>
+                <tr>
+                    <td>
+                        <input type="button" class="btn btn-primary"  value="Cotizacion de origen">
+                    </td>
+                    <td><a></a></td>
+                    <td><a></a></td>
+                    <td>
+                        <a href=""><input type="button" class="btn btn-primary"  value="Ver" ></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</form>

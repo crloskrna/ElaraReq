@@ -1,0 +1,84 @@
+<form name="CotPendiente">
+    <div align="center" style="width: 100%;">
+        <h2 class="lead">Cotización Pendiente</h2>
+        <br>
+        <table style="height: 100%;width: 100%">
+            <tr>
+                <td>
+                    &nbsp;<span>Empresa:</span>
+                </td>
+                <td>
+                    <input ng-model="New_Empresa" type="text" class="form-control" placeholder="Empresa"/>
+                </td>
+                <td>
+                    &nbsp;<span>Fecha de Cotizacion:</span>
+                </td>
+                <td>
+                    <input ng-model="New_FechaCotizacion" type="date" class="form-control"/>
+                </td>
+                <td>
+                    &nbsp;<span>No. Cotizacion:</span>
+                </td>
+                <td>
+                    <input ng-model="new_Nocotizacion" type="text" class="form-control" placeholder="No. Cotizacion"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Nombre del solicitante:</span>
+                </td>
+                <td>
+                    <input ng-model="new_NombreSolicit" type="text" class="form-control" placeholder="Nombre"/>
+                </td>
+                <td>
+                    &nbsp;<span>Fecha de Solicitud:</span>
+                </td>
+                <td>
+                    <input ng-model="new_Fechasolic" type="date" class="form-control" required/>
+                </td>
+                <td>
+                    &nbsp;<span>Vigencia:</span>
+                </td>
+                <td>
+                    <input ng-model="new_Vigencia" type="text" class="form-control" placeholder="vigencia"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;<span>Departamento:</span>
+                </td>
+                <td>
+                    <input ng-model="new_Dpto" type="text" class="form-control" placeholder="Departamento"/>
+                </td>
+                <td>
+                    &nbsp;<span>Fecha Requerimiento:</span>
+                </td>
+                <td>
+                    <input ng-model="new_FechaReq" type="date" class="form-control"/>
+                </td>
+                <td>
+                    &nbsp;<span>Responsable de cotizacion:</span>
+                </td>
+                <td>
+                    <input ng-model="new_responsable" type="text" class="form-control" placeholder="Responsable"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Proyecto:</span>
+                </td>
+                <td>
+                    <input ng-model="new_Proyecto" type="text" class="form-control" placeholder="Proyecto"/>
+                </td>
+                <td>
+                    &nbsp;<span>Tipo de cotizacion:</span>
+                </td>
+                <td>
+                    <input ng-model="new_TipoCot" type="text" class="form-control" placeholder="Tipo de Cotizacion" />
+                </td>
+            </tr>
+        </table>
+        <br>
+        <div class="gridStyle"  ng-grid="gridOptions" align="center" style="width: 100%"/>
+    </div>
+</form>
